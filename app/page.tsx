@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowUpRight, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 
 const experiences = [
   {
@@ -79,13 +79,6 @@ export default function Home() {
       </header>
 
       <section id="inicio" className="hero">
-        <div className="hero-intro">
-          <p className="eyebrow">
-            <Sparkles size={16} aria-hidden="true" />
-            Portfólio pessoal
-          </p>
-        </div>
-
         <div className="hero-stage">
           <h1 className="hero-title-back" aria-label="Oi, sou o João Nascimento">
             <span className="title-line title-line-top">Oi, sou o</span>
