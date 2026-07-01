@@ -67,9 +67,6 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="topbar">
-        <a className="brand" href="#inicio" aria-label="Início">
-          JN
-        </a>
         <nav className="nav-links" aria-label="Navegação principal">
           <a href="#projetos">Projetos</a>
           <a href="#experiencias">Experiências</a>
