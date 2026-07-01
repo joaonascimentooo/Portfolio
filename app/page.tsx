@@ -130,21 +130,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className="about-section">
-        <div className="section-heading">
-          <p className="eyebrow">Sobre</p>
-          <h2>Backend robusto para sistemas de alta demanda.</h2>
-        </div>
-        <p>
-          Como Desenvolvedor e Arquiteto Backend, atuo na concepção, manutenção
-          e evolução de sistemas corporativos e plataformas de alta demanda.
-          Minha especialidade principal reside no backend, onde utilizo Java e o
-          ecossistema Spring, incluindo Spring Security e Spring AI, para
-          projetar arquiteturas de microsserviços resilientes, garantindo
-          segurança e escalabilidade.
-        </p>
-      </section>
-
       <footer id="contato" className="footer">
         <div>
           <p className="eyebrow">Contato</p>

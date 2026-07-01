@@ -252,7 +252,6 @@ h1 {
 }
 
 .section,
-.about-section,
 .footer {
   padding: 84px 0;
   border-top: 1px solid var(--line);
@@ -321,8 +320,7 @@ h1 {
 }
 
 .project-card p,
-.experience-card p,
-.about-section p {
+.experience-card p {
   color: var(--muted);
   line-height: 1.7;
 }
@@ -380,18 +378,6 @@ h1 {
   font-size: 0.82rem;
 }
 
-.about-section {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 40px;
-  align-items: start;
-}
-
-.about-section > p {
-  margin: 0;
-  font-size: 1.08rem;
-}
-
 .footer {
   display: flex;
   gap: 24px;
@@ -443,8 +429,7 @@ h1 {
   }
 
   .project-grid,
-  .experience-grid,
-  .about-section {
+  .experience-grid {
     grid-template-columns: 1fr;
   }
 
@@ -483,7 +468,6 @@ h1 {
   }
 
   .section,
-  .about-section,
   .footer {
     padding: 60px 0;
   }
