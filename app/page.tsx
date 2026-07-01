@@ -1,5 +1,7 @@
-import Image from "next/image";
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
+import { HeroDetails } from "./hero-details";
+import { HeroArt } from "./hero-art";
+import { Navbar } from "./navbar";
 
 const experiences = [
   {
@@ -67,54 +69,12 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="topbar">
-        <nav className="nav-links" aria-label="Navegação principal">
-          <a href="#projetos">Projetos</a>
-          <a href="#experiencias">Experiências</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
-        </nav>
+        <Navbar />
       </header>
 
       <section id="inicio" className="hero">
-        <div className="hero-stage">
-          <h1 className="hero-title-back" aria-label="Oi, sou o João Nascimento">
-            <span className="title-line title-line-top">Oi, sou o</span>
-            <span className="title-line title-line-bottom">João Nascimento</span>
-          </h1>
-          <div className="portrait-wrap" aria-label="Avatar em desenho de João Nascimento">
-            <div className="portrait-glow" />
-            <Image
-              src="/joao-avatar.png?v=transparent"
-              alt="Avatar em desenho de João Nascimento"
-              width={1080}
-              height={1350}
-              className="portrait"
-              priority
-              unoptimized
-            />
-          </div>
-        </div>
-
-        <div className="hero-details">
-          <p className="lead">
-            Desenvolvedor FullStack focado e apaixonado por criar arquiteturas de
-            software robustas e soluções escaláveis. Com forte especialização no
-            ecossistema Java e Spring Boot, construo desde APIs e microsserviços
-            seguros até interfaces dinâmicas utilizando React e Next.js.
-          </p>
-          <div className="hero-actions" aria-label="Links principais">
-            <a className="primary-action" href="#projetos">
-              Ver projetos
-              <ArrowUpRight size={18} aria-hidden="true" />
-            </a>
-            <a className="icon-action" href="https://github.com/" aria-label="GitHub">
-              <Github size={20} aria-hidden="true" />
-            </a>
-            <a className="icon-action" href="https://www.linkedin.com/" aria-label="LinkedIn">
-              <Linkedin size={20} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
+        <HeroArt />
+        <HeroDetails />
       </section>
 
       <section id="projetos" className="section">

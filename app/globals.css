@@ -57,6 +57,7 @@ a {
   display: flex;
   gap: 8px;
   align-items: center;
+  will-change: opacity, transform, filter;
 }
 
 .nav-links a {
@@ -65,6 +66,7 @@ a {
   color: var(--muted);
   font-size: 0.94rem;
   transition: background 180ms ease, color 180ms ease;
+  will-change: opacity, transform;
 }
 
 .nav-links a:hover {
@@ -177,7 +179,9 @@ h1 {
   display: grid;
   width: min(100%, 1120px);
   min-height: clamp(430px, 45vw, 560px);
+  cursor: default;
   place-items: center;
+  perspective: 1000px;
   isolation: isolate;
 }
 
@@ -189,6 +193,7 @@ h1 {
   color: rgba(255, 255, 255, 0.52);
   text-align: center;
   text-shadow: 0 22px 70px rgba(0, 0, 0, 0.54);
+  pointer-events: none;
 }
 
 .title-line {
@@ -198,6 +203,11 @@ h1 {
   font-weight: 850;
   white-space: nowrap;
   transform: translateX(-50%);
+}
+
+.title-copy {
+  display: block;
+  will-change: opacity, transform, filter;
 }
 
 .title-line-top {
@@ -216,7 +226,9 @@ h1 {
   place-items: center;
   isolation: isolate;
   overflow: visible;
-  transform: translateY(24px);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  will-change: transform;
 }
 
 .portrait-glow {
@@ -229,6 +241,7 @@ h1 {
     radial-gradient(circle at 52% 56%, rgba(145, 151, 163, 0.16), transparent 46%);
   filter: blur(4px);
   z-index: -1;
+  will-change: transform;
 }
 
 .portrait {
@@ -467,10 +480,6 @@ h1 {
 
   .portrait {
     width: min(72vw, 310px);
-  }
-
-  .portrait-wrap {
-    transform: translateY(18px);
   }
 
   .section,
