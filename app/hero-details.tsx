@@ -43,10 +43,22 @@ export function HeroDetails() {
           Ver projetos
           <ArrowUpRight size={18} aria-hidden="true" />
         </a>
-        <a className="icon-action" href="https://github.com/" aria-label="GitHub">
+        <a
+          className="icon-action"
+          href="https://github.com/joaonascimentooo"
+          aria-label="GitHub"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Github size={20} aria-hidden="true" />
         </a>
-        <a className="icon-action" href="https://www.linkedin.com/" aria-label="LinkedIn">
+        <a
+          className="icon-action"
+          href="https://www.linkedin.com/in/joao-vitor-nascimentoo"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Linkedin size={20} aria-hidden="true" />
         </a>
       </motion.div>

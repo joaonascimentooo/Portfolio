@@ -275,7 +275,7 @@ export function AnimatedSections() {
         </motion.div>
         <motion.a
           className="primary-action"
-          href="mailto:joao@email.com"
+          href="mailto:joaonascimento197@gmail.com"
           variants={cardReveal}
           whileHover={{ y: -3, scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
