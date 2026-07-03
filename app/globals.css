@@ -285,27 +285,70 @@ h1 {
 }
 
 .project-card {
+  position: relative;
   display: flex;
   min-height: 260px;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.028));
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0);
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  will-change: transform, opacity, filter;
 }
 
 .experience-card {
+  position: relative;
   display: flex;
   min-height: 310px;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 22px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.08), transparent 34%);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0);
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  will-change: transform, opacity, filter;
+}
+
+.project-card::before,
+.experience-card::before {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg, transparent 14%, rgba(255, 255, 255, 0.16), transparent 46%),
+    radial-gradient(circle at 24% 0%, rgba(255, 255, 255, 0.14), transparent 34%);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-24%);
+  transition: opacity 220ms ease, transform 420ms ease;
+}
+
+.project-card:hover,
+.experience-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.26);
+}
+
+.project-card:hover::before,
+.experience-card:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-card > *,
+.experience-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .project-card h3 {
@@ -376,6 +419,14 @@ h1 {
   padding: 7px 10px;
   color: #d7deeb;
   font-size: 0.82rem;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.project-card:hover .tag-row span,
+.experience-card:hover .tag-row span {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f2f5fb;
 }
 
 .footer {
