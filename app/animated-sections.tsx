@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Images, Mail } from "lucide-react";
 import { motion } from "motion/react";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
@@ -111,6 +111,7 @@ const experiences = [
     description:
       "Liderei frentes acadêmicas de inovação e tecnologia, organizando iniciativas, alinhando equipes e representando grupos estudantis em ações institucionais. Como presidente do Grupo Inova e vice presidente da Lumina, conectei visão técnica, comunicação e gestão para impulsionar projetos dentro da comunidade universitária.",
     tags: ["Liderança", "Inovação", "Comunicação", "Gestão"],
+    photosHref: "/galeria",
   },
 ];
 
@@ -234,6 +235,19 @@ export function AnimatedSections() {
                 <h3>{experience.role}</h3>
                 <p>{experience.description}</p>
               </div>
+              {experience.photosHref ? (
+                <motion.a
+                  className="photo-link"
+                  href={experience.photosHref}
+                  variants={tagReveal}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                >
+                  <Images size={16} aria-hidden="true" />
+                  Ver fotos
+                  <ArrowUpRight size={16} aria-hidden="true" />
+                </motion.a>
+              ) : null}
               <motion.div className="tag-row" aria-label="Competências" variants={sectionReveal}>
                 {experience.tags.map((tag) => (
                   <motion.span key={tag} variants={tagReveal}>
