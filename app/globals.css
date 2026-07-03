@@ -369,14 +369,48 @@ h1 {
 }
 
 .experience-context {
-  width: fit-content;
-  margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.experience-context strong {
+  color: var(--text);
+  font-weight: 850;
+}
+
+.experience-context span {
+  min-width: 0;
+  color: #cbd1dc;
+}
+
+.experience-context span::before {
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.34);
+  content: "/";
+}
+
+.experience-context time {
+  margin-left: auto;
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 999px;
-  padding: 7px 10px;
-  color: var(--text) !important;
-  font-size: 0.82rem;
-  font-weight: 750;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #eef1f6;
+  font-size: 0.78rem;
+  font-weight: 760;
+  white-space: nowrap;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.experience-card:hover .experience-context time {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.065);
 }
 
 .project-links {
@@ -484,6 +518,14 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .experience-context {
+    flex-wrap: wrap;
+  }
+
+  .experience-context time {
+    margin-left: 0;
+  }
+
   .footer {
     align-items: flex-start;
     flex-direction: column;
@@ -521,5 +563,15 @@ h1 {
   .section,
   .footer {
     padding: 60px 0;
+  }
+
+  .experience-context {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .experience-context span::before {
+    content: none;
   }
 }

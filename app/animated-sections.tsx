@@ -78,30 +78,38 @@ const tagReveal = {
 const experiences = [
   {
     role: "Backend Architect & Full Stack Developer",
-    context: "Centra | Marketplace | Jan 2025 - Abr 2026",
+    company: "Centra",
+    scope: "Marketplace",
+    period: "Jan 2025 - Abr 2026",
     description:
       "Arquitetei e desenvolvi o ecossistema de microsserviços de um marketplace, sustentando uma base de 150 usuários ativos. Liderei decisões técnicas de ponta a ponta, da modelagem de dados ao deploy em cloud, com Clean Architecture, SOLID e integração com Google Gemini.",
     tags: ["Microsserviços", "Spring Boot", "Clean Architecture", "Google Gemini"],
   },
   {
     role: "Desenvolvedor Full Stack & Instrutor Técnico",
-    context: "CEST | Centro Universitário Santa Terezinha | Mai 2023 - Jan 2026",
+    company: "CEST",
+    scope: "Centro Universitário Santa Terezinha",
+    period: "Mai 2023 - Jan 2026",
     description:
       "Desenvolvi aplicações web com Spring MVC, Hibernate e APIs REST para gestão institucional e automação de processos internos. Também ministrei minicursos de Java e Spring Boot, fortalecendo minha comunicação técnica e liderança em ambiente acadêmico.",
     tags: ["Java", "Spring MVC", "Hibernate", "Instrutoria"],
   },
   {
     role: "Desenvolvedor Backend Java",
-    context: "StarColors | Solução de IA | Mar 2024 - Ago 2024",
+    company: "StarColors",
+    scope: "Solução de IA",
+    period: "Mar 2024 - Ago 2024",
     description:
       "Desenvolvi e sustentei a API core de uma solução de Inteligência Artificial para 50 usuários ativos, com foco em segurança, autenticação JWT, Spring Security, modelagem relacional e integração com AWS EC2 e S3.",
     tags: ["Java", "Spring Security", "JWT", "AWS"],
   },
   {
     role: "Liderança Acadêmica em Inovação",
-    context: "CEST | Escritório Escola e Grupo Inova",
+    company: "CEST",
+    scope: "Presidente do Grupo Inova e Vice Presidente da Lumina",
+    period: "Iniciativas acadêmicas",
     description:
-      "Atuei em iniciativas acadêmicas ligadas à inovação, colaboração e desenvolvimento profissional, conectando visão técnica, organização de projetos e protagonismo dentro da comunidade universitária.",
+      "Liderei frentes acadêmicas de inovação e tecnologia, organizando iniciativas, alinhando equipes e representando grupos estudantis em ações institucionais. Como presidente do Grupo Inova e vice presidente da Lumina, conectei visão técnica, comunicação e gestão para impulsionar projetos dentro da comunidade universitária.",
     tags: ["Liderança", "Inovação", "Comunicação", "Gestão"],
   },
 ];
@@ -217,9 +225,11 @@ export function AnimatedSections() {
               whileTap={{ scale: 0.995 }}
               transition={{ duration: 0.22, ease: easeOut }}
             >
-              <motion.p className="experience-context" variants={tagReveal}>
-                {experience.context}
-              </motion.p>
+              <motion.div className="experience-context" variants={tagReveal}>
+                <strong>{experience.company}</strong>
+                <span>{experience.scope}</span>
+                <time>{experience.period}</time>
+              </motion.div>
               <div>
                 <h3>{experience.role}</h3>
                 <p>{experience.description}</p>
