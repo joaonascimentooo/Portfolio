@@ -822,11 +822,29 @@ h1 {
   }
 
   .hero-stage {
-    min-height: 430px;
+    min-height: 480px;
+    align-items: start;
+    padding-top: 48px;
   }
 
   .portrait {
-    width: min(72vw, 310px);
+    width: min(62vw, 250px);
+  }
+
+  .title-line-top {
+    top: 8px;
+  }
+
+  .title-line-bottom {
+    bottom: 8px;
+  }
+
+  .hero-title-back {
+    z-index: 3;
+  }
+
+  .portrait-wrap {
+    z-index: 2;
   }
 
   .section,
