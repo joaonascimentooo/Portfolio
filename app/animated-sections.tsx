@@ -93,6 +93,7 @@ const experiences = [
     description:
       "Desenvolvi aplicações web com Spring MVC, Hibernate e APIs REST para gestão institucional e automação de processos internos. Também ministrei minicursos de Java e Spring Boot, fortalecendo minha comunicação técnica e liderança em ambiente acadêmico.",
     tags: ["Java", "Spring MVC", "Hibernate", "Instrutoria"],
+    photosHref: "/galeria-cest",
   },
   {
     role: "Desenvolvedor Backend Java",
