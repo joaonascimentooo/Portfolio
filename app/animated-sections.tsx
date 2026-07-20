@@ -77,7 +77,16 @@ const tagReveal = {
 
 const experiences = [
   {
-    role: "Backend Architect & Full Stack Developer",
+    role: "Desenvolvedor Java Júnior",
+    company: "ília",
+    scope: "Desenvolvimento backend",
+    period: "Jul 2026 – Atual",
+    description:
+      "Atuação no desenvolvimento e manutenção de soluções backend em Java e Spring Boot, participando de revisões de código, evolução de APIs, correção de problemas e colaboração com equipes multidisciplinares em ambiente corporativo.",
+    tags: ["Java", "Spring Boot", "APIs", "Code Review"],
+  },
+  {
+    role: "Arquiteto Backend e Desenvolvedor Full Stack",
     company: "Centra",
     scope: "Marketplace",
     period: "Jan 2025 - Abr 2026",
@@ -160,7 +169,7 @@ export function AnimatedSections() {
       >
         <motion.div className="section-heading" variants={headingReveal}>
           <p className="eyebrow">Projetos</p>
-          <h2>Projetos já no ar.</h2>
+          <h2>Projetos em destaque.</h2>
         </motion.div>
         <motion.div className="project-grid" variants={sectionReveal}>
           {projects.map((project) => (
